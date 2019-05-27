@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="danger">
+      <ion-title>Search Result</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="modalDismiss()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>                
+</ion-header>
+
+
+<ion-content>
+
+  <div class="resultcount" *ngIf="car_list;">'{{clen}}' result found.</div>
+
+  <ion-list *ngIf="car_list; else elsetag">
+    <div *ngFor="let val of car_list; let i = index">
+      <ion-item class="item-avatar" (click)="GoToCarDetail(val.vehicle_id);" >
+        <img src="{{base_path}}{{val.photo_path}}" class="list-img" imageViewer >
+        <p text-wrap class="list-txt">
+          {{(val.description | slice:0:50) + (val.description.length > 50 ? '...' : '')}}
+        </p>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <ng-template #elsetag>
+    <div class="nolisting">
+      <p class="p1"><span class="sorry">Sorry ,</span><br> Currently there is no vehicle data available associated with your search criteria.</p>
+    </div>
+  </ng-template>
+
+</ion-content>

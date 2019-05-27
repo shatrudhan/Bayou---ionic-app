@@ -1,0 +1,9 @@
+{
+  "name": "Ribblu",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "1dcf4e78",
+  "app_id": ""
+}

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Bayou City Classic Cars - Search</ion-title>
+    <ion-icon name="log-out" class="logout-btn" (click)="LogoutMe();" *ngIf="login_id != null;"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      
+      <ion-label> YEAR </ion-label>
+      <ion-row>
+        <ion-col size="5">
+          <ion-datetime displayFormat="YYYY" placeholder="year min" min="1900" max="2020" name="min_year" [(ngModel)]="addArray.min_year" ></ion-datetime>
+        </ion-col>
+        <span style="margin: 0 8px 0 8px;position: relative;top: 18px;"> to </span>
+        <ion-col size="5">
+          <ion-datetime displayFormat="YYYY" placeholder="year max" min="1900" max="2020" name="max_year" [(ngModel)]="addArray.max_year"></ion-datetime>
+        </ion-col>
+      </ion-row>
+
+      <ion-label> MAKE </ion-label>
+      <ion-input type="text" placeholder="make" name="make" [(ngModel)]="addArray.make"></ion-input>
+
+      <ion-label> MODEL </ion-label>
+      <ion-input type="text" placeholder="model" name="model" [(ngModel)]="addArray.model"></ion-input>
+
+      <ion-label> ENGINE </ion-label>
+      <ion-input type="text" placeholder="engine" name="engine" [(ngModel)]="addArray.engine"></ion-input>
+
+      <ion-label> TRANSMISSION </ion-label>
+      <ion-input type="text" placeholder="transmission" name="transmission" [(ngModel)]="addArray.transmission"></ion-input>
+
+      <ion-label> STYLE </ion-label>
+      <ion-input type="text" placeholder="style" name="style" [(ngModel)]="addArray.style"></ion-input>
+
+      <ion-label> COST </ion-label>
+      <ion-row>
+        <ion-col size="5">
+          <ion-input type="number" placeholder="cost min" name="min_cost" [(ngModel)]="addArray.min_cost"></ion-input>
+        </ion-col>
+        <span style="margin: 0 8px 0 8px;position: relative;top: 18px;"> to </span>
+        <ion-col size="5">
+          <ion-input type="number" placeholder="cost max" name="max_cost" [(ngModel)]="addArray.max_cost"></ion-input>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-label> SALES PRICE </ion-label>
+      <ion-row>
+        <ion-col size="5">
+          <ion-input type="number" placeholder="price min" name="min_price" [(ngModel)]="addArray.min_price"></ion-input>
+        </ion-col>
+        <span style="margin: 0 8px 0 8px;position: relative;top: 18px;"> to </span>
+        <ion-col size="5">
+          <ion-input type="number" placeholder="price max" name="max_price" [(ngModel)]="addArray.max_price"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-label> COLOR </ion-label>
+      <ion-input type="text" placeholder="color" name="color" [(ngModel)]="addArray.color"></ion-input>
+
+      <br> <br>
+
+      <button ion-button expand="block" color="btn-color" (click)="VehicleSearchBtn();" style="width:100%">SEARCH</button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <br> <br><br> <br>
+  
+</ion-content>
+
+<footer></footer>

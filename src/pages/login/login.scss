@@ -1,0 +1,64 @@
+page-login {
+
+    .skip-btn{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        font-size: 14px;
+    }
+    
+    .login-content{
+        background: url(../assets/images/login-back-image-2.jpg) no-repeat center center fixed;
+        //background-size: 100%;
+    }
+
+    .head-txt{
+        color: #fff;
+        font-size: 4em;
+        padding: 46px 68px;
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .login-form form .item{
+        background-color: transparent !important;
+    }
+
+    .login-form form .item .item-inner {
+        padding-right: 0px;
+        border-bottom: none !important;
+    }
+
+    .login-form form .item .item-inner input{
+        width: 95%;
+        padding: 6px 0px 6px 12px;
+        border-radius: 5px;
+    }
+
+    .login-submit-btn{
+        width: 88% !important;
+        margin: 8px 0 0 18px !important;
+        border-radius: 5px !important;
+    }
+
+    .bottom-btn{
+        position: relative;
+        bottom: -15px;
+        
+    }
+
+    .bottom-btn ion-grid{
+        text-align:center;
+        color: rgb(255, 255, 255) !important;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        a{
+            text-decoration: none;
+            color: #59a6d6;
+        }
+    }
+
+
+}

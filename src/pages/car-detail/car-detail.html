@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Car Detail</ion-title>
+    <ion-icon name="log-out" class="logout-btn" (click)="LogoutMe();" *ngIf="login_id != null;"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="my_content">
+
+  <ion-fab right bottom *ngIf="enable_disable == true">
+    <button ion-fab color="btn-color" (click)="OpenCloseFabBtn();"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="top" class="fablist">
+      <button ion-fab (click)="EditVehicleBtn();">Edit Vehicle</button>
+      <button ion-fab (click)="AddNoteBtn();">Add Note</button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-card>
+    <ion-slides *ngIf="car_photos && car_photos.length" class="image-slider" autoplay="3000" loop="true" speed="1000" class="slides" pager="true" slidesPerView="1">
+      <ion-slide *ngFor="let v4 of car_photos">
+        <img src="{{base_path}}{{v4.image_url}}" class="thumb-img" imageViewer/>
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+
+  <ion-card id="" *ngFor="let v1 of owner_info; let i = index">
+      <ion-card-header>
+        <ion-card-title>OWNER INFORMATION</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        
+        <ion-label> OWNER NAME : {{v1.owner_name}} </ion-label>                    
+        <ion-label> ADDRESS : {{v1.owner_address}}</ion-label>
+        <ion-label> CITY : {{v1.owner_city}}</ion-label>
+        <ion-label> STATE : {{v1.owner_state}}</ion-label>
+        <ion-label> ZIP CODE : {{v1.owner_zip}}</ion-label>
+        <ion-label> PHONE : {{v1.owner_phone}}</ion-label>
+        <ion-label> EMAIL : {{v1.owner_email}}</ion-label>
+
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card id="" *ngFor="let v2 of car_info; let i = index">
+      <ion-card-header>
+        <ion-card-title>VEHICLE INFORMATION</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        
+        <ion-label> YEAR : {{v2.year}} </ion-label>                    
+        <ion-label> MAKE : {{v2.make}}</ion-label>
+        <ion-label> MODEL : {{v2.model}}</ion-label>
+        <ion-label> TRIM : {{v2.trim}}</ion-label>
+        <ion-label> STYLE : {{v2.style}}</ion-label>
+        <ion-label> COLOR : {{v2.color}}</ion-label>
+        <ion-label> Vin : {{v2.vin}}</ion-label>
+        <ion-label> MILEAGE : {{v2.mileage}} miles</ion-label>
+        <ion-label> PRICE : {{v2.price | currency:'USD':'symbol':'2.2'}}</ion-label>
+        <ion-label> COST : {{v2.cost | currency:'USD':'symbol':'2.2'}}</ion-label>
+        <ion-label> ENGINE : {{v2.engine}}</ion-label>
+        <ion-label> TRANSMISSION : {{v2.transmission}}</ion-label>
+        <ion-label text-wrap> DESCRIPTION : {{v2.description}}</ion-label>
+
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>NOTES</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       
+        <ion-row class="noteform" id="noteform" hidden>
+            <p class="note-txt-1">
+              {{user_name}} <br> {{current_date | date: 'dd/MM/yyyy'}} 
+            </p>
+            <p>
+              <ion-textarea placeholder="write note here" rows="2" cols="6" name="note" [(ngModel)]="addArray.note"></ion-textarea>
+            </p>
+            <p class="noteform-btn-div">
+                <button class="btn1" (click)="HideNoteForm();">CANCEL</button>
+                <button class="btn2" (click)="SubmitNoteBtn();">SUBMIT</button>
+            </p>
+        </ion-row>
+
+        <ion-item class="item-avatar"  *ngFor="let v3 of notes; let i = index" >
+          <p class="note-txt-1">
+              {{user_name}} <br> {{v3.create_date* 1000 | date: 'dd/MM/yyyy' }}
+          </p>
+          <p text-wrap class="note-txt-2">
+            {{v3.notes}}
+          </p>
+        </ion-item>
+
+      </ion-card-content>      
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "911104597391",
+    "firebase_url": "https://ribblu-146510.firebaseio.com",
+    "project_id": "ribblu-146510",
+    "storage_bucket": "ribblu-146510.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911104597391:android:e2ac3f13e3b9c019",
+        "android_client_info": {
+          "package_name": "com.ribblu.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911104597391-u7cqqet53dqtl01at1b31hq1amn55m39.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "911104597391-cp4gsobfmipki4ddm5srsf2iv1vhhrqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ribblu.android",
+            "certificate_hash": "c729a3b20b7c9f14ecee44c4f7ea09e8730bcbf1"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_a6almQADZS_eAeudPfggbSKo-QnmCD8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911104597391-u7cqqet53dqtl01at1b31hq1amn55m39.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "911104597391-vjqbpjft4c78msplcoeobkoihdc3st0v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ribblu.ios"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911104597391:android:8a5da6be64f2a403",
+        "android_client_info": {
+          "package_name": "com.ribbluuser.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911104597391-grcol37if4723f84umb5mo5efl6q8sb6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ribbluuser.android",
+            "certificate_hash": "c729a3b20b7c9f14ecee44c4f7ea09e8730bcbf1"
+          }
+        },
+        {
+          "client_id": "911104597391-u7cqqet53dqtl01at1b31hq1amn55m39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_a6almQADZS_eAeudPfggbSKo-QnmCD8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911104597391-u7cqqet53dqtl01at1b31hq1amn55m39.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "911104597391-vjqbpjft4c78msplcoeobkoihdc3st0v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ribblu.ios"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

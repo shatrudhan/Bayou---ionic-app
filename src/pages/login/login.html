@@ -1,0 +1,39 @@
+
+
+<ion-content class="login-content" padding>
+
+  <button ion-button color="danger" class="skip-btn" (click)="SkipMe()" clear>Skip >></button>
+
+  <div class="head-txt">
+    Bayou City Classic Cars
+  </div>
+
+  <div class="login-form">
+
+      <form>
+          <ion-item>
+            <input type="text" name="username" [(ngModel)]="addArray.username" placeholder="User ID" />
+          </ion-item>
+          <ion-item>
+            <input type="password" name="password" [(ngModel)]="addArray.password" placeholder="password" />
+          </ion-item>
+          <button ion-button type="submit" class="login-submit-btn" (click)="LogginMe();" color="btn-color">LOGIN</button>
+        </form>
+
+  </div>
+
+  <div class="bottom-btn">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          Forgot <a href="JavaScript:void(0);" (click)="ForgotPassword();">Password</a>?
+        </ion-col>
+        <ion-col size="6">
+          Need To <a href="JavaScript:void(0);" (click)="RegisterMe();">Register</a>?
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+</ion-content>

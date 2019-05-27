@@ -1,0 +1,59 @@
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title text-wrap>BAYOU CITY CLASSIC CARS - REGISTRATION</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+      <ion-label> USER NAME (LOGIN ID)</ion-label>
+      <ion-input type="text" placeholder="user name (login id)" name="username" [(ngModel)]="addArray.username"></ion-input>
+
+      <ion-label> PASSWORD </ion-label>
+      <ion-input type="password" placeholder="password" name="password" [(ngModel)]="addArray.password"></ion-input>
+
+      <ion-label> NAME </ion-label>
+      <ion-input type="text" placeholder="name" name="name" [(ngModel)]="addArray.name"></ion-input>
+      
+      <ion-label> ADDRESS </ion-label>
+      <ion-textarea placeholder="address" rows="2" cols="5" name="address" [(ngModel)]="addArray.address"></ion-textarea>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> CITY </ion-label>
+          <ion-input type="text" placeholder="city" name="city" [(ngModel)]="addArray.city"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> STATE </ion-label>
+          <ion-input type="text" placeholder="state" name="state" [(ngModel)]="addArray.state"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> ZIP CODE </ion-label>
+          <ion-input type="number" placeholder="zipcode" name="zip" [(ngModel)]="addArray.zip"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> PHONE </ion-label>
+          <ion-input type="number" placeholder="phone" name="phone" [(ngModel)]="addArray.phone"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-label> EMAIL ADDRESS </ion-label>
+      <ion-input type="text" placeholder="email address" name="email" [(ngModel)]="addArray.email"></ion-input>
+
+      <br>
+      <button ion-button expand="block" color="btn-color"  (click)="DoSignupBtn();" style="width:100%">REGISTER</button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title text-center>Go back to <a href="JavaScript:void(0);" (click)="GoToLoginPage();">Login</a></ion-title>
+  </ion-toolbar>
+</ion-footer>

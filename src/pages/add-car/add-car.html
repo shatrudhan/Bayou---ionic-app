@@ -1,0 +1,166 @@
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Bayou City Classic Cars - Add</ion-title>
+    <ion-icon name="log-out" class="logout-btn" (click)="LogoutMe();"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card id="owner_content">
+    <ion-card-header>
+      <ion-card-title>OWNER INFORMATION</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+      <ion-label> OWNER NAME </ion-label>
+      <ion-input type="text" placeholder="name" name="owner_name" [(ngModel)]="addArray.owner_name"></ion-input>
+      
+      <ion-label> ADDRESS </ion-label>
+      <ion-textarea placeholder="address" rows="2" cols="5" name="owner_address" [(ngModel)]="addArray.owner_address"></ion-textarea>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> CITY </ion-label>
+          <ion-input type="text" placeholder="city" name="owner_city" [(ngModel)]="addArray.owner_city"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> STATE </ion-label>
+          <ion-input type="text" placeholder="state" name="owner_state" [(ngModel)]="addArray.owner_state"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> ZIP CODE </ion-label>
+          <ion-input type="number" placeholder="zipcode" name="owner_zip" [(ngModel)]="addArray.owner_zip"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> PHONE </ion-label>
+          <ion-input type="number" placeholder="phone" name="owner_phone" [(ngModel)]="addArray.owner_phone"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-label> EMAIL ADDRESS </ion-label>
+      <ion-input type="text" placeholder="email address" name="owner_email" [(ngModel)]="addArray.owner_email"></ion-input>
+
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card id="image_content">
+    <ion-card-header>
+      <ion-card-title>CAR IMAGE(s)</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+    <ion-item class="bb">
+      <button ion-button color="light" type="button" (click)="ClickToOpenActionSheet()" class="attachBtn"> 
+        <ion-icon name="attach"></ion-icon> &nbsp;
+        Upload Car Photo (s)
+      </button>
+
+      <!-- <div *ngFor="let pval of imageFileName; let i = index">
+          <div class="up-img-div">
+            <img src="{{pval.photos}}" class="up-img" />
+            <ion-icon name="close" class="up-img-close" (click)="RemoveUploadedImg(pval.index);"></ion-icon>
+          </div>
+      </div> -->
+
+      <div class="image_cars" *ngFor="let pval of imageFileName; let i = index">
+          <div class="up-img-div">
+            <img src="{{base_path}}{{pval.photos}}" class="thumb-img up-img" imageViewer/>
+            <ion-icon name="close" class="up-img-close" (click)="RemoveUploadedImg(pval.index);"></ion-icon>
+          </div>
+      </div>
+
+    </ion-item>
+    
+
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card id="car_content">
+    <ion-card-header>
+      <ion-card-title>CAR INFORMATION</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> YEAR </ion-label>
+          <ion-datetime displayFormat="YYYY" placeholder="year"  name="year" [(ngModel)]="addArray.year" min="1900" max="2020"></ion-datetime>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> MAKE </ion-label>
+          <ion-input type="text" placeholder="make" name="make" [(ngModel)]="addArray.make"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> MODEL </ion-label>
+          <ion-input type="text" placeholder="model" name="model" [(ngModel)]="addArray.model"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> TRIM </ion-label>
+          <ion-input type="text" placeholder="trim" name="vtrim" [(ngModel)]="addArray.vtrim"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> STYLE </ion-label>
+          <ion-input type="text" placeholder="style" name="style" [(ngModel)]="addArray.style"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> COLOR </ion-label>
+          <ion-input type="text" placeholder="color" name="color" [(ngModel)]="addArray.color"></ion-input>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> Vin </ion-label>
+          <ion-input type="text" placeholder="Vin" name="vin" [(ngModel)]="addArray.vin"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> MILEAGE </ion-label>
+          <ion-input type="text" placeholder="mileage/miles" name="mileage" [(ngModel)]="addArray.mileage"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="5">
+          <ion-label> PRICE ($)</ion-label>
+          <ion-input type="number" placeholder="price" name="price" [(ngModel)]="addArray.price"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label> COST ($)</ion-label>
+          <ion-input type="number" placeholder="cost" name="cost" [(ngModel)]="addArray.cost"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-label> ENGINE </ion-label>
+      <ion-input type="text" placeholder="engine" name="engine" [(ngModel)]="addArray.engine"></ion-input>
+
+      <ion-label> TRANSMISSION </ion-label>
+      <ion-input type="text" placeholder="transmission" name="transmission" [(ngModel)]="addArray.transmission"></ion-input>
+
+      <ion-label> DESCRIPTION </ion-label>
+      <ion-textarea placeholder="description" rows="6" cols="15" name="description" [(ngModel)]="addArray.description"></ion-textarea>
+      
+      <ion-label> NOTES </ion-label>
+      <ion-textarea placeholder="notes" rows="4" cols="10" name="note" [(ngModel)]="addArray.note"></ion-textarea>
+
+      <br><br>
+
+      <button ion-button expand="block" color="btn-color" (click)="CarInfoSubmit();" style="width:100%">SUBMIT</button>
+
+    </ion-card-content>
+  </ion-card>
+  <br><br><br><br>
+</ion-content>
+
+<footer></footer>

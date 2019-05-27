@@ -1,0 +1,99 @@
+.header{
+    text-align: left;
+}
+
+.logout-btn{
+    position: absolute;
+    right: 6px;
+    top: 16px;
+    bottom: 0px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.active-me{
+    color: #ff4343;
+}
+
+.md,.ios,.wp{
+
+    .toast-container{
+       text-align: center !important;
+     }
+   
+     .loaderCss .loading-wrapper{
+         background-color: rgba(0, 0, 0, 0) !important;
+         padding: 0px !important;
+         width: 17% !important;
+         border-radius: 50%;
+         box-shadow: initial;
+     }
+   
+     .loaderCss .loading-wrapper ion-spinner *  {
+       stroke: rgb(255, 67, 67);
+     }
+   
+     .loaderCss ion-spinner {
+         position: static;
+         display: inline-block;
+         width: 48px;
+         height: 48px;
+     }
+   
+     // bottom loader (PAGE)
+   
+     .loaderCss2 .loading-wrapper{
+         background-color: rgba(0, 0, 0, 0) !important;
+         padding: 0px !important;
+         width: 17% !important;
+         border-radius: 50%;
+         box-shadow: initial;
+         position: absolute;
+         top: 70%;
+         right: 43%;
+         left: 43%;
+     }
+     
+     .loaderCss2 .loading-wrapper ion-spinner *  {
+       stroke: rgb(255, 67, 67);
+     }
+   
+     .loaderCss2 ion-spinner {
+         position: static;
+         display: inline-block;
+         width: 48px;
+         height: 48px;
+     }
+   
+     .loaderCss2 ion-backdrop {
+       opacity: 0 !important;
+     }
+   
+     // center loader (PAGE) 
+     .loaderCss3 .loading-wrapper{
+       background-color: rgba(0, 0, 0, 0) !important;
+       padding: 0px !important;
+       width: 17% !important;
+       border-radius: 50%;
+       box-shadow: initial;
+   }
+   
+   .loaderCss3 .loading-wrapper ion-spinner *  {
+     stroke: rgb(255, 67, 67);
+   }
+   
+   .loaderCss3 ion-spinner {
+       position: static;
+       display: inline-block;
+       width: 48px;
+       height: 48px;
+   }
+   
+   .loaderCss3 ion-backdrop {
+     opacity: 0 !important;
+   }
+   }
+   // loader css ends
+
+
+   

@@ -1,0 +1,34 @@
+<!-- Generated template for the FooterComponent component -->
+<ion-footer>
+  <ion-toolbar>
+    
+    <ion-grid style="text-align:center">
+      <ion-row>
+        
+        <ion-col size="4" (click)="GoToPage(1);" [style.color]="active_inactive_color_1">
+          <ion-icon name="home"></ion-icon><br>
+          HOME
+        </ion-col>
+
+        <ion-col size="4" (click)="GoToPage(2);" [style.color]="active_inactive_color_2">
+          <ion-icon name="search"></ion-icon><br>
+          SEARCH
+        </ion-col>
+
+        <ion-col size="4" (click)="GoToPage(3);" [style.color]="active_inactive_color_3" *ngIf="login_id != null; else elsetag">
+          <ion-icon name="add-circle"></ion-icon><br>
+          ADD
+        </ion-col>
+
+        <ng-template class="log-out" #elsetag>
+          <ion-col size="4" (click)="GoToPage(4);" [style.color]="active_inactive_color_3">
+            <ion-icon name="log-in"></ion-icon><br>
+            Login
+          </ion-col>
+        </ng-template>
+
+      </ion-row>
+    </ion-grid>
+    
+  </ion-toolbar>
+</ion-footer>

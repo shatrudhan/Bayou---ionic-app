@@ -1,0 +1,45 @@
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Cars - List</ion-title>
+    <ion-icon name="log-out" class="logout-btn" (click)="LogoutMe();" *ngIf="login_id != null;"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-grid>
+      <ion-row>
+        <ion-searchbar color="danger" [(ngModel)]="searchQuery" 
+        (keyup)="updateList($event)"
+        (ionCancel)="onCancel($event)"
+        [showCancelButton]="true"
+        show-cancel="false" 
+        placeholder="Search" class="search-bar-input"></ion-searchbar>
+        <ion-col class="sort-col">
+          SORT <ion-icon name="swap" class="sort-icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-list *ngIf="car_list; else elsetag">
+      <div *ngFor="let val of car_list; let i = index">
+        <ion-item class="item-avatar" (click)="GoToCarDetail(val.vehicle_id);" >
+          <img src="{{base_path}}{{val.photo_path}}" class="list-img" imageViewer >
+          <p text-wrap class="list-txt">
+            {{(val.description | slice:0:50) + (val.description.length > 50 ? '...' : '')}}
+          </p>
+        </ion-item>
+      </div>
+    </ion-list>
+  
+    <ng-template #elsetag>
+      <div class="nolisting">
+        <p class="p1"><span class="sorry">Sorry ,</span><br> Currently there is no vehicle data available associated with your search criteria.</p>
+      </div>
+    </ng-template>
+    
+</ion-content>
+
+<footer></footer>

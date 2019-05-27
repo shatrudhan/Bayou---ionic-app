@@ -1,0 +1,125 @@
+page-car-detail {
+
+    ion-content{
+        background: #f1f1f1 !important
+    }
+
+    ion-slide.swiper-slide {
+        left: 0%;
+        width: 75%;
+    }
+    
+    .slide-zoom {
+        // background: #e6e6e6;
+    }
+ 
+    .thumb-img {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .note-txt-1{
+        float: left;
+    }
+
+    .note-txt-2{
+        padding: 0 0 0 18px;
+    }
+
+    .card-header {
+        background: rgb(136, 136, 136) !important;
+        padding: 1px 16px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 0;
+    }
+
+    ion-fab-list button.fab {
+        contain: layout;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        z-index: 0;
+        display: block;
+        overflow: hidden;
+        width: 56px;
+        height: 56px;
+        border-radius: 0%;
+        font-size: 14px;
+        line-height: 56px;
+        text-align: center;
+        text-overflow: ellipsis;
+        text-transform: none;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background-color, opacity 100ms linear;
+        background-clip: padding-box;
+        -webkit-font-kerning: none;
+        font-kerning: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    ion-fab-list button.fab {
+        position: relative;
+        right: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        width: 100%;
+        height: 30px;
+        background: #777777;
+        border-radius: 6px;
+    }
+
+    .blur-back{
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+        pointer-events: none !important;
+      }
+
+    ion-input{
+        border: 1px solid #cacaca;
+        border-radius: 3px;
+    }
+
+    ion-textarea{
+        border: 1px solid #cacaca;
+        border-radius: 3px;
+        width: 167px;
+    }
+
+    .noteform{
+        padding: 20px 0px 12px 15px;
+    }
+
+    .noteform p{
+        font-size: 14px;
+        color: #777777;
+        padding: 0px 18px 0 0px;
+    }
+
+    .noteform-btn-div{
+        margin: 2px 70px;
+        position: relative;
+        right: -39px;
+    }
+    
+    .btn1, .btn2{
+        background: #f53d3d;
+        color: #FFF;
+        padding: 3px 5px 3px 5px;
+        border-radius: 3px;
+    }
+
+}
