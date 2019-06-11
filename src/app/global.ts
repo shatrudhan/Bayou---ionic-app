@@ -3,13 +3,13 @@ import { FormGroup } from '@angular/forms';
 export var global = {
 
     
-    apiBaseUrl: 'http://pixbrand.in/bayou-api/',
-    apiAdminUrl : "http://pixbrand.in/bayou-api/Admin/",
-    apiUserUrl : "http://pixbrand.in/bayou-api/User/",
+    apiBaseUrl: 'http://pixbrand.me/bayou-api/',
+    apiAdminUrl : "http://pixbrand.me/bayou-api/Admin/",
+    apiUserUrl : "http://pixbrand.me/bayou-api/User/",
     
-    // apiBaseUrl: 'http://192.168.0.134/bayou-api/',
-    // apiAdminUrl : "http://192.168.0.134/bayou-api/Admin/",
-    // apiUserUrl : "http://192.168.0.134/bayou-api/User/",
+    // apiBaseUrl: 'http://192.168.0.107/bayou-api/',
+    // apiAdminUrl : "http://192.168.0.107/bayou-api/Admin/",
+    // apiUserUrl : "http://192.168.0.107/bayou-api/User/",
     
 
     makeDisabled: true,

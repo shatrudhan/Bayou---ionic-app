@@ -16,7 +16,7 @@
         [showCancelButton]="true"
         show-cancel="false" 
         placeholder="Search" class="search-bar-input"></ion-searchbar>
-        <ion-col class="sort-col">
+        <ion-col class="sort-col" (click)="ShortBy()">
           SORT <ion-icon name="swap" class="sort-icon"></ion-icon>
         </ion-col>
       </ion-row>
@@ -26,7 +26,8 @@
     <ion-list *ngIf="car_list; else elsetag">
       <div *ngFor="let val of car_list; let i = index">
         <ion-item class="item-avatar" (click)="GoToCarDetail(val.vehicle_id);" >
-          <img src="{{base_path}}{{val.photo_path}}" class="list-img" imageViewer >
+          <!-- <img src="{{base_path}}{{val.photo_path}}" class="list-img" imageViewer > -->
+          <img src="{{base_path}}{{val.photo_path}}" class="list-img" >
           <p text-wrap class="list-txt">
             {{(val.description | slice:0:50) + (val.description.length > 50 ? '...' : '')}}
           </p>

@@ -17,6 +17,10 @@
           <ion-item>
             <input type="password" name="password" [(ngModel)]="addArray.password" placeholder="password" />
           </ion-item>
+          <ion-item>
+            <ion-label style="color:#fff">Keep me signed in</ion-label>
+            <ion-checkbox [(ngModel)]="addArray.keep" name="keep" style="margin: 9px 12px 9px 4px !important;"></ion-checkbox>
+          </ion-item>
           <button ion-button type="submit" class="login-submit-btn" (click)="LogginMe();" color="btn-color">LOGIN</button>
         </form>
 

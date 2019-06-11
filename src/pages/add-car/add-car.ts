@@ -70,14 +70,15 @@ export class AddCarPage {
     this.loader.present();
 
     this.addArray.user_id = localStorage.getItem('user_id');
-    this.addArray.owner_name = localStorage.getItem('user_name');
-    this.addArray.owner_address = localStorage.getItem('user_address');
-    this.addArray.owner_city = localStorage.getItem('user_city');
-    this.addArray.owner_state = localStorage.getItem('user_state');
-    this.addArray.owner_zip = localStorage.getItem('user_zip');
-    this.addArray.owner_phone = localStorage.getItem('user_phone');
-    this.addArray.owner_email = localStorage.getItem('user_email');
 
+    // this.addArray.owner_name = localStorage.getItem('user_name');
+    // this.addArray.owner_address = localStorage.getItem('user_address');
+    // this.addArray.owner_city = localStorage.getItem('user_city');
+    // this.addArray.owner_state = localStorage.getItem('user_state');
+    // this.addArray.owner_zip = localStorage.getItem('user_zip');
+    // this.addArray.owner_phone = localStorage.getItem('user_phone');
+    // this.addArray.owner_email = localStorage.getItem('user_email');
+    
   }
 
   ionViewDidLoad() 
@@ -87,7 +88,18 @@ export class AddCarPage {
 
   LogoutMe() 
   {
-    localStorage.clear();
+    // localStorage.clear();
+    localStorage.removeItem('user_id');
+    localStorage.removeItem('user_name');
+    localStorage.removeItem('login_id');
+    localStorage.removeItem('user_address');
+    localStorage.removeItem('user_city');
+    localStorage.removeItem('user_state');
+    localStorage.removeItem('user_zip');
+    localStorage.removeItem('user_phone');
+    localStorage.removeItem('user_email');
+    localStorage.removeItem('user_user_type');
+    localStorage.removeItem('is_active');
     this.navCtrl.setRoot(LoginPage, {}, {animate:true,direction:'back'});
   }
 

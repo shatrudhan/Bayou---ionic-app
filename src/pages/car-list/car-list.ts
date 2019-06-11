@@ -48,13 +48,31 @@ export class CarListPage {
   
   LogoutMe() 
   {
-    localStorage.clear();
+    // localStorage.clear();
+    localStorage.removeItem('user_id');
+    localStorage.removeItem('user_name');
+    localStorage.removeItem('login_id');
+    localStorage.removeItem('user_address');
+    localStorage.removeItem('user_city');
+    localStorage.removeItem('user_state');
+    localStorage.removeItem('user_zip');
+    localStorage.removeItem('user_phone');
+    localStorage.removeItem('user_email');
+    localStorage.removeItem('user_user_type');
+    localStorage.removeItem('is_active');
     this.navCtrl.setRoot(LoginPage, {}, {animate:true,direction:'back'});
   }
 
-  GoForLogin()
+  ShortBy()
   {
+    this.loader = this.loadingCtrl.create({cssClass: 'loaderCss3'});
+    this.loader.present();
 
+    this.car_list = this.car_list.reverse();
+
+    if(this.car_list){
+      this.loader.dismiss();
+    }
   }
   
   GettingAllCars()

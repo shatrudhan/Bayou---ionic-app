@@ -85,8 +85,8 @@ export class RegistrationPage {
       let toast = this.toastCtrl.create({ message: 'zip code required !', position: 'top', duration: 3000 });
       toast.present();
     }
-    else if(this.addArray.zip.length != 6){
-      let toast = this.toastCtrl.create({ message: 'zip code length should be 6 character !', position: 'top', duration: 3000 });
+    else if(this.addArray.zip.length != 5){
+      let toast = this.toastCtrl.create({ message: 'zip code length should be 5 character !', position: 'top', duration: 3000 });
       toast.present();
     }
     else if(!this.addArray.phone){

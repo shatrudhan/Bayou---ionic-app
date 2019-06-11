@@ -14,7 +14,8 @@ export class LoginPage {
 
   addArray = {
     'username':'', 
-    'password':''
+    'password':'',
+    'keep':''
   };
 
   constructor(
@@ -31,7 +32,6 @@ export class LoginPage {
     public authservice: AuthProviderServiceProvider,
   ) 
   {
-    
     if(window.localStorage.getItem('user_id')){
       this.navCtrl.setRoot(CarListPage, {}, {animate:true,direction:'forward'});
     }
@@ -47,11 +47,17 @@ export class LoginPage {
 
   ionViewDidLoad() 
   {
+    this.addArray.keep = 'true';
+
+    this.addArray.username = localStorage.getItem('keep_loginid');
+    this.addArray.password = localStorage.getItem('keep_password');
+
     this.loader.dismiss();
   }
 
   LogginMe()
   {
+    
     if(!this.addArray.username){
       let toast = this.toastCtrl.create({ message: 'user name (login id) required !', position: 'top', duration: 3000 });
       toast.present();
@@ -75,8 +81,17 @@ export class LoginPage {
           this.loader.dismiss();
           let toast = this.toastCtrl.create({ message: result['msg'], position: 'top', duration: 3000 });
           toast.present();
-          this.addArray = {'username':'','password':''};
           
+          if(this.addArray.keep){
+            window.localStorage.setItem('keep_loginid',this.addArray.username);
+            window.localStorage.setItem('keep_password',this.addArray.password);
+          }else{
+            window.localStorage.setItem('keep_loginid','');
+            window.localStorage.setItem('keep_password','');
+          }
+
+          this.addArray = {'username':'','password':'', 'keep':''};
+
           localStorage.setItem('user_id',result['user_data']['user_id']);
           localStorage.setItem('user_name',result['user_data']['name']);
           localStorage.setItem('login_id',result['user_data']['login_id']);
